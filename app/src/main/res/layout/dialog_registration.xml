@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/_20dp"
+    app:cardCornerRadius="@dimen/_20dp"
+    app:cardElevation="0dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clReg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/_20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivCloseIcon"
+                    android:layout_width="@dimen/_35dp"
+                    android:layout_height="@dimen/_35dp"
+                    android:layout_margin="@dimen/_5dp"
+                    android:padding="@dimen/_5dp"
+                    android:src="@drawable/ic_close"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:text="@string/register_to_ndocument_organizer"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ivCloseIcon" />
+
+                <EditText
+                    android:id="@+id/etFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50dp"
+                    android:layout_marginHorizontal="@dimen/_20dp"
+                    android:layout_marginVertical="@dimen/_20dp"
+                    android:background="@drawable/edit_text_up_round_corner"
+                    android:hint="@string/full_name"
+                    android:inputType="textPersonName"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_text_color"
+                    android:textSize="@dimen/_16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="@dimen/_20dp"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:background="@drawable/edit_text_0_round_corner"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_text_color"
+                    android:textSize="@dimen/_16sp"
+                    app:layout_constraintEnd_toEndOf="@id/etFullName"
+                    app:layout_constraintStart_toStartOf="@id/etFullName"
+                    app:layout_constraintTop_toBottomOf="@+id/etFullName" />
+
+                <TextView
+                    android:id="@+id/tvCountryName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:layout_marginBottom="@dimen/_20dp"
+                    android:background="@drawable/edit_text_bottom_round_corner"
+                    android:gravity="center_vertical"
+                    android:text="@string/country"
+                    android:textColor="@color/hint_text_color"
+                    android:textSize="@dimen/_16sp"
+                    app:drawableEndCompat="@drawable/ic_arrow_up_down"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+                <TextView
+                    android:id="@+id/tvContinueBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50dp"
+                    android:layout_marginHorizontal="@dimen/_20dp"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:layout_marginBottom="@dimen/_5dp"
+                    android:background="@drawable/corner_radius_5"
+                    android:gravity="center"
+                    android:text="@string/continue_"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvCountryName" />
+
+                <TextView
+                    android:id="@+id/tvNewReg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvContinueBtn"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:text="@string/already_registered"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvContinueBtn" />
+
+                <TextView
+                    android:id="@+id/tvLoginBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:text="@string/login_here"
+                    android:textColor="@color/resend_text_color"
+                    android:textSize="@dimen/_16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvNewReg" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clCountrySearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvCountrySearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20dp"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:layout_marginBottom="@dimen/_5dp"
+                    app:cardBackgroundColor="@color/country_list_bg_color"
+                    app:cardCornerRadius="@dimen/_10dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ivCloseCountryList"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginHorizontal="@dimen/_5dp"
+                            android:layout_marginVertical="@dimen/_5dp"
+                            android:padding="@dimen/_5dp"
+                            android:src="@drawable/ic_close" />
+
+                        <TextView
+                            android:id="@+id/tvSelectCountryTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="@dimen/_10dp"
+                            android:layout_marginTop="@dimen/_25dp"
+                            android:text="@string/select_country"
+                            android:textSize="@dimen/_18sp"
+                            android:textStyle="bold" />
+
+
+                        <EditText
+                            android:id="@+id/etSearchLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50dp"
+                            android:layout_below="@id/tvSelectCountryTitle"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginHorizontal="@dimen/_10dp"
+                            android:layout_marginTop="@dimen/_20dp"
+                            android:layout_marginBottom="@dimen/_5dp"
+                            android:background="@drawable/country_search_view_round_corner_bg"
+                            android:drawableEnd="@drawable/ic_baseline_search_24"
+                            android:hint="@string/search_country"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:padding="@dimen/_10dp"
+                            android:paddingStart="@dimen/_10dp"
+                            android:textColor="@color/text_color"
+                            android:textColorHint="@color/hint_text_color" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvCountryList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/etSearchLabel"
+                            android:layout_centerHorizontal="true"
+                            android:scrollbars="vertical"
+                            tools:itemCount="5"
+                            tools:listitem="@layout/rv_item_country" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50dp"
+                    android:layout_below="@id/cvCountrySearch"
+                    android:layout_marginHorizontal="@dimen/_20dp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:layout_marginBottom="@dimen/_20dp"
+                    android:background="@drawable/edit_text_bottom_round_corner"
+                    android:gravity="center_vertical"
+                    android:text="@string/country"
+                    android:textColor="@color/hint_text_color"
+                    android:textSize="@dimen/_16sp"
+                    app:drawableEndCompat="@drawable/ic_arrow_up_down"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cvCountrySearch" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</com.google.android.material.card.MaterialCardView>

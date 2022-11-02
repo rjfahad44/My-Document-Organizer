@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_main_bg_color"
+    app:layout_constrainedHeight="true"
+    app:layout_constraintWidth="true"
+    tools:context=".ui.activities.profile.ProfileActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/customized_action_bar_for_activity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rlvProfilePicture"
+        android:layout_width="@dimen/_130dp"
+        android:layout_height="@dimen/_160dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:background="@drawable/profile_picture_background"
+        android:elevation="@dimen/_1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="@dimen/_60dp"
+            android:layout_height="@dimen/_60dp"
+            android:src="@drawable/ic_my_profile"
+            app:layout_constraintBottom_toBottomOf="@+id/rlvProfilePicture"
+            app:layout_constraintCircle="@id/rlvProfilePicture"
+            app:layout_constraintCircleRadius="@dimen/_0dp"
+            app:layout_constraintEnd_toEndOf="@+id/rlvProfilePicture"
+            app:layout_constraintStart_toStartOf="@+id/rlvProfilePicture"
+            app:layout_constraintTop_toTopOf="@+id/rlvProfilePicture"
+            app:tint="@color/profile_edit_icon_tint_color" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/ivEditProfile"
+        android:layout_width="@dimen/_22dp"
+        android:layout_height="@dimen/_22dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_profile_picture_edit"
+        android:translationZ="@dimen/_6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rlvProfilePicture"
+        app:layout_constraintCircle="@id/rlvProfilePicture"
+        app:layout_constraintCircleAngle="90"
+        app:layout_constraintCircleRadius="@dimen/_62dp"
+        app:layout_constraintTop_toTopOf="@id/rlvProfilePicture"
+        tools:ignore="MissingConstraints" />
+
+
+    <RelativeLayout
+        android:id="@+id/rlvProfileBasicInformation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20dp"
+        android:layout_marginTop="@dimen/_40dp"
+        android:background="@drawable/profile_dashed_border"
+        android:paddingVertical="@dimen/_50dp"
+        app:cardCornerRadius="@dimen/_10dp"
+        app:cardElevation="@dimen/_1dp"
+        app:layout_constraintBottom_toTopOf="@+id/rvResetPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivEditProfile">
+
+
+        <RelativeLayout
+            android:id="@+id/rlvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:foreground="?selectableItemBackground"
+            android:padding="@dimen/_10dp">
+
+            <ImageView
+                android:id="@+id/ivNameIcon"
+                android:layout_width="@dimen/_20dp"
+                android:layout_height="@dimen/_20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/_15dp"
+                android:src="@drawable/ic_my_profile"
+                app:tint="@color/profile_edit_icon_tint_color" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/ivNameIcon"
+                android:text="Nur E Alam Khan"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_14sp" />
+
+            <ImageView
+                android:id="@+id/ivNameEdit"
+                android:layout_width="@dimen/_30dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_edit" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlvCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlvName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10dp"
+            android:foreground="?selectableItemBackground"
+            android:padding="@dimen/_10dp">
+
+
+            <ImageView
+                android:id="@+id/ivCountryIcon"
+                android:layout_width="@dimen/_20dp"
+                android:layout_height="@dimen/_20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/_15dp"
+                android:src="@drawable/ic_country"
+                app:tint="@color/profile_edit_icon_tint_color" />
+
+            <TextView
+                android:id="@+id/tvCountryName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/ivCountryIcon"
+                android:text="Bangladesh"
+                android:textColor="@color/text_color" />
+
+            <ImageView
+                android:id="@+id/ivEditCountry"
+                android:layout_width="@dimen/_30dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_edit" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlvEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlvCountry"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10dp"
+            android:foreground="?selectableItemBackground"
+            android:padding="@dimen/_10dp">
+
+            <ImageView
+                android:id="@+id/ivEmailIcon"
+                android:layout_width="@dimen/_20dp"
+                android:layout_height="@dimen/_20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/_15dp"
+                android:src="@drawable/ic_email"
+                app:tint="@color/profile_edit_icon_tint_color" />
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/ivEmailIcon"
+                android:text="porosh.kanon@gmail.com"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_14sp" />
+
+            <ImageView
+                android:id="@+id/ivEditEmail"
+                android:layout_width="@dimen/_30dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_edit" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/mbtgGenderSelect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlvEmail"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginHorizontal="@dimen/_20dp"
+            android:foreground="?selectableItemBackground"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mbtnGenderMale"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_60dp"
+                android:fontFamily="@font/tajawal_medium"
+                android:src="@drawable/ic_email"
+                android:text="@string/male"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_14sp"
+                app:icon="@drawable/ic_gender_male" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mbtnGenderFemale"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_60dp"
+                android:fontFamily="@font/tajawal_medium"
+                android:src="@drawable/ic_email"
+                android:text="@string/female"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_14sp"
+                app:icon="@drawable/ic_gender_female" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mbtnGenderOther"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_60dp"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/tajawal_medium"
+                android:text="@string/other"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_14sp"
+                app:icon="@drawable/ic_gender_other" />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rvResetPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/_10dp"
+        android:paddingVertical="@dimen/_5dp"
+        android:background="@drawable/click_effect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlvProfileBasicInformation">
+
+
+        <ImageView
+            android:id="@+id/ivResetPassword"
+            android:layout_width="@dimen/_20dp"
+            android:layout_height="@dimen/_20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_privacy"
+            app:tint="@color/resend_text_color" />
+
+        <TextView
+            android:id="@+id/tvResetPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_toEndOf="@id/ivResetPassword"
+            android:fontFamily="@font/tajawal_medium"
+            android:text="@string/reset_password"
+            android:textColor="@color/resend_text_color"
+            android:textSize="@dimen/_14sp" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

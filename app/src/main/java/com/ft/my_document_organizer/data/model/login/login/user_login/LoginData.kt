@@ -1,0 +1,12 @@
+package com.ft.my_document_organizer.data.model.login.login.user_login
+
+import com.google.gson.annotations.SerializedName
+
+data class LoginData(
+    @SerializedName("access_token") val access_token: String? = null,
+    @SerializedName("message") val message: String? = null,
+    @SerializedName("token_type") val token_type: String? = null,
+    @SerializedName("username") val email: String? = null,
+    @SerializedName("password") val password: String? = null,
+    @SerializedName("user_info") val user_info: LoginUserInfo? = LoginUserInfo()
+)

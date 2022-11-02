@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_main_bg_color"
+    tools:context=".fragment.crop_fragment.CropFragment">
+
+    <ImageView
+        android:id="@+id/ivPhotoView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvShowCropEdges"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="@dimen/_50dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/demo_image" />
+
+    <TextView
+        android:id="@+id/tvShowCropEdges"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_50dp"
+        android:layout_marginBottom="@dimen/_20dp"
+        android:background="@drawable/crop_button_bg"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/_20dp"
+        android:text="@string/drag_near_corners_to_adjust"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16sp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/rlBottomSheet"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rlBottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_corner_radius_20_white"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:id="@+id/rlRetake"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_50dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginHorizontal="@dimen/_20dp"
+            android:layout_marginVertical="@dimen/_20dp"
+            android:background="@drawable/retake_btn_bg"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_40dp">
+
+            <TextView
+                android:id="@+id/tvRetake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/retake"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sp" />
+
+            <ImageView
+                android:id="@+id/ivRetakeEndIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8dp"
+                android:layout_toEndOf="@+id/tvRetake"
+                android:src="@drawable/ic_refresh"
+                app:tint="@color/white" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlKeep"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_50dp"
+            android:layout_marginHorizontal="@dimen/_20dp"
+            android:layout_marginVertical="@dimen/_20dp"
+            android:layout_toEndOf="@id/rlRetake"
+            android:background="@drawable/keep_btn_bg"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_40dp">
+
+            <TextView
+                android:id="@+id/tvKeep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/keep"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sp" />
+
+            <ImageView
+                android:id="@+id/ivKeepEndIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8dp"
+                android:layout_toEndOf="@+id/tvKeep"
+                android:src="@drawable/ic_baseline_check_24"
+                app:tint="@color/white" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

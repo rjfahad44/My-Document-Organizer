@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_40dp"
+    android:layout_marginVertical="@dimen/_20dp"
+    android:background="@android:color/transparent"
+    app:cardBackgroundColor="@color/country_list_bg_color"
+    app:cardCornerRadius="@dimen/_10dp"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="@dimen/_35dp"
+            android:layout_height="@dimen/_35dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="@dimen/_5dp"
+            android:layout_marginVertical="@dimen/_5dp"
+            android:background="@drawable/click_effect"
+            android:padding="@dimen/_5dp"
+            android:src="@drawable/ic_close" />
+
+        <TextView
+            android:id="@+id/tvSelectCountryTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_marginTop="@dimen/_25dp"
+            android:text="@string/select_document_type"
+            android:textSize="@dimen/_18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etSearchDocType"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:layout_below="@id/tvSelectCountryTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="@dimen/_10dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginBottom="@dimen/_5dp"
+            android:background="@drawable/country_search_view_round_corner_bg"
+            android:drawableEnd="@drawable/ic_baseline_search_24"
+            android:hint="@string/search_document_type"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLines="1"
+            android:padding="@dimen/_10dp"
+            android:textColorHint="@color/hint_text_color"
+            android:textSize="@dimen/_16sp"
+            app:paddingStart="@dimen/_10dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDocumentType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etSearchDocType"
+            android:layout_centerHorizontal="true"
+            android:scrollbars="vertical"
+            tools:itemCount="5"
+            tools:listitem="@layout/rv_item_document_type" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:layout_below="@id/rvDocumentType"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="@dimen/_10dp"
+            android:background="@color/light_blue" />
+
+        <RelativeLayout
+            android:id="@+id/rlAddNewDocument"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40dp"
+            android:layout_below="@id/divider"
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="@dimen/_5dp"
+            android:background="@drawable/click_effect"
+            android:gravity="center"
+            android:padding="@dimen/_5dp">
+
+            <TextView
+                android:id="@+id/tvAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10dp"
+                android:text="@string/add_new"
+                android:textAllCaps="true"
+                android:textColor="@color/light_blue"
+                android:textSize="@dimen/_14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivIconPlus"
+                android:layout_width="@dimen/_24dp"
+                android:layout_height="@dimen/_24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/_10dp"
+                android:layout_toEndOf="@+id/tvAdd"
+                android:src="@drawable/ic_baseline_add_24"
+                app:tint="@color/light_blue" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

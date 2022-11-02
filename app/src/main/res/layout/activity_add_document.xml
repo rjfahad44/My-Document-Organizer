@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_main_bg_color"
+    tools:context=".ui.activities.add_document.AddDocumentActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/customized_action_bar_for_activity" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAddDocImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rlBottomSheet"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        tools:listitem="@layout/rv_item_add_document" />
+
+    <RelativeLayout
+        android:id="@+id/rlBottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/top_corner_radius_20_white"
+        android:gravity="center_horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilDocTitle"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10dp"
+            android:layout_marginTop="@dimen/_15dp"
+            android:hint="@string/document_name"
+            android:textColorHint="@color/hint_text_color"
+            app:boxBackgroundColor="@color/light_ash2"
+            app:boxCornerRadiusBottomEnd="@dimen/_5dp"
+            app:boxCornerRadiusBottomStart="@dimen/_5dp"
+            app:boxCornerRadiusTopEnd="@dimen/_5dp"
+            app:boxCornerRadiusTopStart="@dimen/_5dp"
+            app:boxStrokeErrorColor="@color/red"
+            app:endIconMode="clear_text"
+            app:helperTextTextColor="@color/red">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietDocTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:lines="1"
+                android:maxLines="1"
+                android:textColor="@color/text_color"
+                android:textCursorDrawable="@drawable/edit_text_curso_color"
+                android:textSize="@dimen/_16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvSelectDocumentType"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:layout_below="@id/tilDocTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="@dimen/_10dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginBottom="@dimen/_15dp"
+            android:background="@drawable/country_search_view_round_corner_bg"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/_10dp"
+            android:text="@string/select_a_document_type"
+            android:textColor="@color/hint_text_color"
+            android:textSize="@dimen/_16sp"
+            app:drawableEndCompat="@drawable/ic_arrow_up_down" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvSelectDocumentType"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_10dp"
+            android:paddingBottom="@dimen/_20dp">
+
+            <RelativeLayout
+                android:id="@+id/rlDiscard"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_50dp"
+                android:layout_marginEnd="@dimen/_5dp"
+                android:layout_weight="1"
+                android:background="@drawable/retake_btn_bg"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvDiscard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/discard"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sp" />
+
+                <ImageView
+                    android:id="@+id/ivDiscardEndIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8dp"
+                    android:layout_toEndOf="@+id/tvDiscard"
+                    android:src="@drawable/ic_baseline_close_24"
+                    app:tint="@color/white" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlNext"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_50dp"
+                android:layout_marginStart="@dimen/_5dp"
+                android:layout_weight="1"
+                android:background="@drawable/keep_btn_bg"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/next"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sp" />
+
+                <ImageView
+                    android:id="@+id/ivNextEndIcon"
+                    android:layout_width="@dimen/_24dp"
+                    android:layout_height="@dimen/_24dp"
+                    android:layout_marginStart="@dimen/_8dp"
+                    android:layout_toEndOf="@+id/tvNext"
+                    android:src="@drawable/ic_baseline_arrow_forward_24"
+                    app:tint="@color/white" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

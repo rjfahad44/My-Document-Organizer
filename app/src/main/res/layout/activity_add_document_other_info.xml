@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_main_bg_color"
+    tools:context=".ui.activities.add_document.AddDocumentOtherInfoActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/customized_action_bar_for_activity" />
+
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginHorizontal="@dimen/_10dp"
+        android:layout_marginVertical="@dimen/_10dp"
+        android:text="@string/other_information"
+        android:textColor="@color/other_info_text_color"
+        android:textSize="@dimen/_16sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFiledInfoItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvInfo"
+        android:layout_centerHorizontal="true"
+        tools:itemCount="6"
+        tools:listitem="@layout/rv_item_doc_info" />
+
+    <RelativeLayout
+        android:id="@+id/rlAddNewDocument"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_40dp"
+        android:layout_below="@id/rvFiledInfoItems"
+        android:layout_alignParentEnd="true"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10dp"
+            android:text="@string/add_new"
+            android:textAllCaps="true"
+            android:textColor="@color/light_blue"
+            android:textSize="@dimen/_16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivIconPlus"
+            android:layout_width="@dimen/_24dp"
+            android:layout_height="@dimen/_24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="@dimen/_10dp"
+            android:layout_toEndOf="@+id/tvAdd"
+            android:src="@drawable/ic_baseline_add_24"
+            app:tint="@color/light_blue" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/rlBottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/top_corner_radius_20_white"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_50dp"
+            android:layout_marginVertical="@dimen/_20dp"
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:layout_weight="1"
+            android:background="@drawable/retake_btn_bg"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivBackStartIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_back_24"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/tvBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8dp"
+                android:layout_toEndOf="@id/ivBackStartIcon"
+                android:text="@string/back"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlSave"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_50dp"
+            android:layout_marginVertical="@dimen/_20dp"
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:layout_weight="1"
+            android:background="@drawable/keep_btn_bg"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sp" />
+
+            <ImageView
+                android:id="@+id/ivSaveEndIcon"
+                android:layout_width="@dimen/_24dp"
+                android:layout_height="@dimen/_24dp"
+                android:layout_marginStart="@dimen/_8dp"
+                android:layout_toEndOf="@+id/tvSave"
+                android:src="@drawable/ic_baseline_check_24"
+                app:tint="@color/white" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

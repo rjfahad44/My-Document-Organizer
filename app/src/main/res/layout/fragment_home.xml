@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/customized_action_bar_for_activity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/splash_screen_bg"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+
+        <RelativeLayout
+            android:id="@+id/rlDashedBorderContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="@dimen/_20dp"
+            android:background="@drawable/recent_documents_dashed_border">
+
+            <ImageView
+                android:id="@+id/ivFile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginVertical="@dimen/_40dp"
+                android:src="@drawable/ic_recent_files" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivFile"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/tajawal_bold"
+                android:text="@string/add_your_first_document"
+                android:textColor="@color/hint_text_color"
+                android:textSize="@dimen/_16sp" />
+
+            <TextView
+                android:id="@+id/tvSubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvTitle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="@dimen/_20dp"
+                android:layout_marginTop="@dimen/_15dp"
+                android:layout_marginBottom="@dimen/_30dp"
+                android:fontFamily="@font/tajawal_regular"
+                android:text="@string/you_don_t_have_any_files_yet_click_at_the_bottom_of_the_screen_and_add_some"
+                android:textAlignment="center"
+                android:textColor="@color/hint_text_color"
+                android:textSize="@dimen/_14sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlDashedBorderContainer"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_30dp"
+            android:drawablePadding="@dimen/_10dp"
+            android:text="@string/learn_how"
+            android:textAlignment="center"
+            android:textColor="@color/google_login_btn_text_color"
+            android:textSize="@dimen/_14sp"
+            app:drawableStartCompat="@drawable/ic_video_learn" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

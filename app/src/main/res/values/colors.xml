@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="app_bg">#5764FF</color>
+    <color name="splash_screen_bg">#F3F4FF</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="blue">#5764FF</color>
+    <color name="light_blue">#4285F4</color>
+    <color name="dark_blue">#2C3280</color>
+    <color name="sky_blue">#8094FF</color>
+    <color name="green">#34A853</color>
+    <color name="light_green">#40C764</color>
+    <color name="dark_green">#389551</color>
+    <color name="golden">#FFCC00</color>
+    <color name="gray">#C98723</color>
+    <color name="light_gray">#FBAE2B</color>
+    <color name="ash">#BCBEE1</color>
+    <color name="light_ash">#D9DBF3</color>
+    <color name="light_ash2">#E7E8F8</color>
+    <color name="dark_ash">#6D79A5</color>
+    <color name="dark_red">#B8472F</color>
+    <color name="crop_btn_bg">#393836</color>
+
+    <color name="text_color">#42435A</color>
+    <color name="doc_item_bottom_text_bg">#BF42435A</color>
+    <color name="text_color_all_labels">#2C3280</color>
+    <color name="other_info_text_color">#2C3280</color>
+    <color name="label_sort_btn_color">#4285F4</color>
+    <color name="hint_text_color">#8688A8</color>
+    <color name="remainder_clock_color">#8688A8</color>
+    <color name="label_sort_icon_color">#8688A8</color>
+    <color name="counter_icon_color">#8688A8</color>
+    <color name="edit_text_color">#E7E8F8</color>
+    <color name="google_login_btn_text_color">#4285F4</color>
+    <color name="document_title_text_color">#4285F4</color>
+    <color name="add_doc_dialog_bg_color">#4285F4</color>
+    <color name="add_doc_dialog_divider_bg_color">#2367D6</color>
+    <color name="success_text_color">#34A853</color>
+    <color name="failed_text_color">#EA4335</color>
+    <color name="country_list_bg_color">#F3F4FF</color>
+    <color name="divider_bg_color">#E7E8F8</color>
+    <color name="country_text_color">#8688A8</color>
+    <color name="delete_drawable_bg">#8688A8</color>
+    <color name="document_type_text_color">#8688A8</color>
+    <color name="layout_main_bg_color">#F3F4FF</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="resend_text_color">#4285F4</color>
+    <color name="profile_edit_icon_tint_color">#8688A8</color>
+    <color name="retake_btn_bg_color">#8688A8</color>
+
+</resources>

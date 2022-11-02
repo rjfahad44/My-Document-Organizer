@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.camera.CameraActivity">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/_0dp"
+        android:translationZ="@dimen/_5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/pvViewCamera"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/_0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80dp"
+        android:background="#4DDFDFDF"
+        android:gravity="bottom"
+        android:paddingBottom="@dimen/_10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@id/tvCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="@dimen/_20dp"
+            android:background="@drawable/click_effect"
+            android:paddingHorizontal="@dimen/_8dp"
+            android:paddingVertical="@dimen/_5dp"
+            android:text="@string/cancel"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sp" />
+
+        <ImageView
+            android:id="@+id/ivChangeCamera"
+            android:layout_width="@dimen/_34dp"
+            android:layout_height="@dimen/_34dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/_5dp"
+            android:background="@drawable/click_effect"
+            android:src="@drawable/ic_change_camera"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/ivFlashCamera"
+            android:layout_width="@dimen/_34dp"
+            android:layout_height="@dimen/_34dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="@dimen/_20dp"
+            android:padding="@dimen/_5dp"
+            android:background="@drawable/click_effect"
+            android:src="@drawable/ic_flash_off"
+            app:tint="@color/white" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivCameraCapture"
+        android:layout_width="@dimen/_60dp"
+        android:layout_height="@dimen/_60dp"
+        android:background="@drawable/capture_button_bg"
+        android:src="@drawable/ic_baseline_lens_24"
+        app:layout_constraintBottom_toBottomOf="@+id/mcvPhotoView"
+        app:layout_constraintEnd_toStartOf="@id/rlDone"
+        app:layout_constraintStart_toEndOf="@id/mcvPhotoView"
+        app:layout_constraintTop_toTopOf="@+id/mcvPhotoView"
+        app:tint="@color/white" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcvPhotoView"
+        android:layout_width="@dimen/_70dp"
+        android:layout_height="@dimen/_90dp"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginBottom="@dimen/_50dp"
+        android:translationZ="@dimen/_0dp"
+        app:cardCornerRadius="@dimen/_10dp"
+        app:cardElevation="@dimen/_0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/ivPhotoPreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher_foreground" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <RelativeLayout
+        android:id="@+id/rlDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_20dp"
+        android:background="@drawable/corner_radius_50_white"
+        android:paddingHorizontal="@dimen/_40dp"
+        android:paddingVertical="@dimen/_10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivCameraCapture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivCameraCapture">
+
+        <TextView
+            android:id="@+id/tvDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/done"
+            android:textAllCaps="true"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_16sp" />
+
+        <TextView
+            android:id="@+id/tvPhotoCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/tvDone"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_16sp" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

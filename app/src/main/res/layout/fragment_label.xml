@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_main_bg_color"
+    tools:context=".fragment.label_fragment.LabelFragment">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/customized_action_bar_for_activity" />
+
+    <EditText
+        android:id="@+id/etSearchLabel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="@dimen/_10dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_marginBottom="@dimen/_5dp"
+        android:background="@drawable/country_search_view_round_corner_bg"
+        android:drawableEnd="@drawable/ic_baseline_search_24"
+        android:hint="@string/search_labels"
+        android:lines="1"
+        android:maxLines="1"
+        android:inputType="text"
+        android:imeOptions="actionSearch"
+        android:padding="@dimen/_10dp"
+        android:paddingStart="@dimen/_10dp"
+        android:textColor="@color/text_color"
+        android:textColorHint="@color/hint_text_color" />
+
+    <TextView
+        android:id="@+id/tvAllLabels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etSearchLabel"
+        android:layout_alignParentStart="true"
+        android:layout_marginHorizontal="@dimen/_10dp"
+        android:layout_marginVertical="@dimen/_15dp"
+        android:text="@string/all_labels"
+        android:textColor="@color/text_color_all_labels"
+        android:textSize="@dimen/_16sp"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:id="@+id/rlLabelsSortBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_35dp"
+        android:layout_below="@id/etSearchLabel"
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="@dimen/_5dp"
+        android:layout_marginEnd="@dimen/_10dp"
+        android:background="@drawable/label_sort_btn_bg"
+        android:padding="@dimen/_5dp">
+
+        <TextView
+            android:id="@+id/tvAllLabelSortTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_5dp"
+            android:paddingStart="@dimen/_5dp"
+            android:text="@string/alphabetical"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivAllLabelSortIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/tvAllLabelSortTitle"
+            android:layout_marginEnd="@dimen/_5dp"
+            android:src="@drawable/ic_baseline_sort_by_alpha_24"
+            app:tint="@color/white" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLabels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlLabelsSortBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_5dp"
+        tools:listitem="@layout/rv_item_all_labels" />
+
+</RelativeLayout>

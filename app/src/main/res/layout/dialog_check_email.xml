@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/_20dp"
+    app:cardCornerRadius="@dimen/_20dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivCloseIcon"
+            android:layout_width="@dimen/_35dp"
+            android:layout_height="@dimen/_35dp"
+            android:layout_margin="@dimen/_5dp"
+            android:padding="@dimen/_5dp"
+            android:src="@drawable/ic_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20dp"
+            android:text="@string/check_your_email"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivCloseIcon" />
+
+        <TextView
+            android:id="@+id/tvSubTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_15dp"
+            android:text="@string/we_ve_sent_you_a_4_digit_confirmation_code_to_your_email"
+            android:textColor="@color/hint_text_color"
+            android:textSize="@dimen/_16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+        <EditText
+            android:id="@+id/etVerifyEmailCode"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:layout_marginHorizontal="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:background="@drawable/edit_text_round_corner_5"
+            android:gravity="center"
+            android:hint="4 8 9 5 8 1"
+            android:inputType="numberDecimal"
+            android:lines="1"
+            android:maxLines="1"
+            android:maxLength="6"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSubTitle" />
+
+        <TextView
+            android:id="@+id/tvContinueBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:layout_marginHorizontal="@dimen/_20dp"
+            android:layout_marginVertical="@dimen/_15dp"
+            android:background="@drawable/corner_radius_5"
+            android:gravity="center"
+            android:text="@string/continue_"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etVerifyEmailCode" />
+
+        <TextView
+            android:id="@+id/tvNewReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_18dp"
+            android:text="@string/don_t_receive_the_code"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvContinueBtn" />
+
+        <TextView
+            android:id="@+id/tvReSendOtp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginBottom="@dimen/_20dp"
+            android:text="@string/resend"
+            android:textColor="@color/resend_text_color"
+            android:textSize="@dimen/_16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNewReg" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

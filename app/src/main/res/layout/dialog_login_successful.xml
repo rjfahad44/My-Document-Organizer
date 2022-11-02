@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/_20dp"
+    app:cardCornerRadius="@dimen/_20dp"
+    app:cardElevation="0dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivSuccessIcon"
+            android:layout_width="@dimen/_70dp"
+            android:layout_height="@dimen/_70dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:src="@drawable/ic_success"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSuccessTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8dp"
+            android:text="@string/success"
+            android:textColor="@color/success_text_color"
+            android:textSize="@dimen/_20sp"
+            app:layout_constraintEnd_toEndOf="@id/ivSuccessIcon"
+            app:layout_constraintStart_toStartOf="@id/ivSuccessIcon"
+            app:layout_constraintTop_toBottomOf="@id/ivSuccessIcon" />
+
+        <TextView
+            android:id="@+id/tvSubTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20dp"
+            android:layout_marginVertical="@dimen/_10dp"
+            android:text="@string/congratulations_your_account_has_been_successfully_created"
+            android:textAlignment="center"
+            android:textColor="@color/hint_text_color"
+            android:textSize="@dimen/_16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSuccessTitle" />
+
+
+        <TextView
+            android:id="@+id/tvContinueBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:layout_marginHorizontal="@dimen/_20dp"
+            android:layout_marginVertical="@dimen/_20dp"
+            android:background="@drawable/green_corner_radius_5"
+            android:gravity="center"
+            android:text="@string/continue_"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/tvSubTitle"
+            app:layout_constraintStart_toStartOf="@id/tvSubTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvSubTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

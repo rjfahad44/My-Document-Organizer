@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_40dp"
+    android:layout_marginVertical="@dimen/_20dp"
+    app:cardCornerRadius="@dimen/_15dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_20dp">
+
+        <ImageView
+            android:id="@+id/ivFailedIcon"
+            android:layout_width="@dimen/_70dp"
+            android:layout_height="@dimen/_70dp"
+            android:layout_marginTop="@dimen/_30dp"
+            android:src="@drawable/ic_delete_doc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tvSubTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20dp"
+            android:layout_marginVertical="@dimen/_20dp"
+            android:text="@string/are_you_sure_nyou_want_to_discard_this_document"
+            android:textAlignment="center"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_18sp"
+            app:layout_constraintBottom_toTopOf="@id/divider1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivFailedIcon" />
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="@dimen/_25dp"
+            android:background="@color/ash"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSubTitle" />
+
+
+        <TextView
+            android:id="@+id/tvYesDiscard"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40dp"
+            android:layout_marginHorizontal="@dimen/_20dp"
+            android:gravity="center"
+            android:text="@string/yes_discard"
+            android:textAllCaps="true"
+            android:textColor="@color/hint_text_color"
+            android:textSize="@dimen/_18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/ash"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvYesDiscard" />
+
+        <TextView
+            android:id="@+id/tvNoKeep"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40dp"
+            android:layout_marginHorizontal="@dimen/_20dp"
+            android:gravity="center"
+            android:text="@string/no_keep"
+            android:textAllCaps="true"
+            android:textColor="@color/light_blue"
+            android:textSize="@dimen/_18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

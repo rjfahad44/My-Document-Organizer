@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.add_field.AddFieldActivity"
+    android:background="@color/layout_main_bg_color">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/customized_action_bar_for_activity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvEntryFieldContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10dp"
+        android:layout_marginVertical="@dimen/_10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginHorizontal="@dimen/_5dp"
+                android:layout_marginTop="@dimen/_15dp"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:background="@drawable/light_ash_corner_radius_5"
+                android:hint="@string/name"
+                android:inputType="textPersonName"
+                android:lines="1"
+                android:maxLines="1"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/hint_text_color"
+                android:textSize="@dimen/_16sp" />
+
+            <CheckBox
+                android:id="@+id/cbMendatory"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_24dp"
+                android:layout_below="@id/etName"
+                android:layout_alignParentEnd="true"
+                android:buttonTint="@color/light_blue"
+                android:checked="true"
+                android:layoutDirection="rtl"
+                android:text="Mendatory"
+                android:textColor="@color/light_blue"
+                android:textSize="@dimen/_12sp" />
+
+            <TextView
+                android:id="@+id/tvSelectOption"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50dp"
+                android:layout_below="@id/cbMendatory"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="@dimen/_10dp"
+                android:layout_marginVertical="@dimen/_10dp"
+                android:background="@drawable/country_search_view_round_corner_bg"
+                android:drawablePadding="@dimen/_10dp"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_20dp"
+                android:text="@string/select_options"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_16sp"
+                app:drawableEndCompat="@drawable/ic_arrow_up_down"
+                app:drawableStartCompat="@drawable/ic_select_option" />
+
+            <TextView
+                android:id="@+id/tvOption"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50dp"
+                android:layout_below="@id/tvSelectOption"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="@dimen/_10dp"
+                android:layout_marginVertical="@dimen/_10dp"
+                android:background="@drawable/country_search_view_round_corner_bg"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_20dp"
+                android:text="Option"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_16sp" />
+
+            <TextView
+                android:id="@+id/tvOptionField"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50dp"
+                android:layout_below="@id/tvOption"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginBottom="@dimen/_15dp"
+                android:background="@drawable/country_search_view_round_corner_bg"
+                android:drawableEnd="@drawable/ic_minus_with_circle"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_20dp"
+                android:paddingEnd="@dimen/_10dp"
+                android:text="@string/option"
+                android:textColor="@color/hint_text_color"
+                android:textSize="@dimen/_16sp" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tvAddMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+ Add more"
+        android:textColor="@color/light_blue"
+        android:textSize="@dimen/_16sp"
+        android:textStyle="bold"
+        android:layout_marginVertical="@dimen/_10dp"
+        app:layout_constraintTop_toBottomOf="@+id/cvEntryFieldContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/click_effect"
+        android:padding="@dimen/_5dp"
+        android:layout_marginHorizontal="@dimen/_10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:text="@string/done"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16sp"
+        android:background="@drawable/blue_corner_radius_5"
+        android:layout_marginHorizontal="@dimen/_40dp"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:layout_marginBottom="@dimen/_40dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

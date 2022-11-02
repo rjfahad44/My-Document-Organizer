@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/_10dp"
+    app:cardElevation="@dimen/_1dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivIconDocument"
+            android:layout_width="@dimen/_30dp"
+            android:layout_height="@dimen/_30dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:src="@drawable/ic_document_ash"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_toStartOf="@id/ivThreeDotMenuItem"
+            android:layout_toEndOf="@id/ivIconDocument"
+            android:ellipsize="end"
+            android:textColor="@color/document_title_text_color"
+            android:textSize="@dimen/_16sp"
+            tools:text="Document Name Goes Here...." />
+
+        <ImageView
+            android:id="@+id/ivThreeDotMenuItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/_10dp"
+            android:src="@drawable/ic_three_dots"
+            tools:ignore="ContentDescription" />
+
+        <RelativeLayout
+            android:id="@+id/rlDocumentCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivIconDocument"
+            android:layout_alignParentStart="true"
+            android:layout_marginVertical="@dimen/_10dp"
+            android:layout_marginStart="@dimen/_12dp">
+
+            <ImageView
+                android:id="@+id/ivIconDocumentCounter"
+                android:layout_width="@dimen/_16dp"
+                android:layout_height="@dimen/_16dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_document_counter"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tvDocumentCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/_5dp"
+                android:layout_toEndOf="@id/ivIconDocumentCounter"
+                android:lines="1"
+                android:maxLength="3"
+                android:maxLines="1"
+                android:textColor="@color/hint_text_color"
+                android:textSize="@dimen/_12sp"
+                tools:text="3" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlRemainderDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivIconDocument"
+            android:layout_marginStart="@dimen/_11dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_toEndOf="@id/rlDocumentCounter">
+
+            <ImageView
+                android:id="@+id/ivIconRemainder"
+                android:layout_width="@dimen/_16dp"
+                android:layout_height="@dimen/_16dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_alarm_24"
+                app:tint="@color/green"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tvRemainderDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5dp"
+                android:layout_toEndOf="@id/ivIconRemainder"
+                android:textColor="@color/green"
+                android:textSize="@dimen/_12sp"
+                tools:text="September 6, 2022" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivIconDocument"
+            android:layout_marginStart="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_toEndOf="@id/rlRemainderDate">
+
+            <ImageView
+                android:id="@+id/ivIconCalendar"
+                android:layout_width="@dimen/_16dp"
+                android:layout_height="@dimen/_16dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_feather_calendar"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5dp"
+                android:layout_toEndOf="@id/ivIconCalendar"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12sp"
+                tools:text="September 6, 2022" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivIconDocument"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:layout_toEndOf="@id/rlDate">
+
+            <ImageView
+                android:id="@+id/ivIconFolder"
+                android:layout_width="@dimen/_16dp"
+                android:layout_height="@dimen/_16dp"
+                android:layout_centerVertical="true"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/ic__feather_folder" />
+
+            <TextView
+                android:id="@+id/tvLevelName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5dp"
+                android:layout_toEndOf="@id/ivIconFolder"
+                android:ellipsize="end"
+                android:lines="1"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12sp"
+                tools:text="Personal...(+1)" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

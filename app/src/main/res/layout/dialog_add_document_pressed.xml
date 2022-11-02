@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_40dp"
+    android:layout_marginVertical="@dimen/_20dp"
+    app:cardBackgroundColor="@color/add_doc_dialog_bg_color"
+    app:cardCornerRadius="@dimen/_10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rlCamera"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true">
+
+            <ImageView
+                android:id="@+id/ivCamera"
+                android:layout_width="@dimen/_24dp"
+                android:layout_height="@dimen/_24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginVertical="@dimen/_15dp"
+                android:layout_marginStart="@dimen/_100dp"
+                android:src="@drawable/ic_camera"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tvCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/_10dp"
+                android:layout_toEndOf="@id/ivCamera"
+                android:text="@string/camera"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1dp"
+                android:layout_below="@id/ivCamera"
+                android:layout_marginHorizontal="@dimen/_5dp"
+                android:background="@color/add_doc_dialog_divider_bg_color" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlGallery"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60dp"
+            android:layout_below="@id/rlCamera"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true">
+
+            <ImageView
+                android:id="@+id/ivGallery"
+                android:layout_width="@dimen/_24dp"
+                android:layout_height="@dimen/_24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginVertical="@dimen/_15dp"
+                android:layout_marginStart="@dimen/_100dp"
+                android:src="@drawable/ic_gallery"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tvGallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/_10dp"
+                android:layout_toEndOf="@id/ivGallery"
+                android:text="@string/gallery"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1dp"
+                android:layout_below="@id/ivGallery"
+                android:layout_marginHorizontal="@dimen/_5dp"
+                android:background="@color/add_doc_dialog_divider_bg_color" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlFileManager"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60dp"
+            android:layout_below="@id/rlGallery"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true">
+
+            <ImageView
+                android:id="@+id/ivFileManager"
+                android:layout_width="@dimen/_24dp"
+                android:layout_height="@dimen/_24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginVertical="@dimen/_15dp"
+                android:layout_marginStart="@dimen/_100dp"
+                android:src="@drawable/ic_file_manager"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tvFileManager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/_10dp"
+                android:layout_toEndOf="@id/ivFileManager"
+                android:text="@string/file_manager"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1dp"
+                android:layout_below="@id/ivFileManager"
+                android:layout_marginHorizontal="@dimen/_5dp"
+                android:background="@color/add_doc_dialog_divider_bg_color" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlOnlyText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60dp"
+            android:layout_below="@id/rlFileManager"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true">
+
+            <ImageView
+                android:id="@+id/ivOnlyText"
+                android:layout_width="@dimen/_24dp"
+                android:layout_height="@dimen/_24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginVertical="@dimen/_15dp"
+                android:layout_marginStart="@dimen/_100dp"
+                android:src="@drawable/ic_only_text"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tvOnlyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/_10dp"
+                android:layout_toEndOf="@id/ivOnlyText"
+                android:text="@string/text_only"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

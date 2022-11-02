@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/_15dp"
+    app:cardElevation="@dimen/_1dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_25dp">
+
+        <RelativeLayout
+            android:id="@+id/rlvDialogHeader"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/_20dp"
+            android:layout_marginVertical="@dimen/_20dp"
+            android:background="@drawable/gradient_color_unlimited_package_background">
+
+
+            <ImageView
+                android:id="@+id/imgvBackground"
+                android:layout_width="@dimen/_50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_20dp"
+                android:scaleType="fitEnd"
+                android:src="@drawable/ic_subscription_left_background" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/tajawal_bold"
+                android:text="@string/unlimited_access_to_all_features"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_14sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlvMyProfile"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:layout_below="@+id/rlvDialogHeader"
+            android:layout_centerHorizontal="true"
+            android:foreground="?selectableItemBackground"
+            android:paddingHorizontal="@dimen/_40dp"
+            tools:ignore="UnusedAttribute">
+
+            <ImageView
+                android:id="@+id/imgvMyProfile"
+                android:layout_width="@dimen/_24dp"
+                android:layout_height="@dimen/_24dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_my_profile" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_20dp"
+                android:layout_toEndOf="@id/imgvMyProfile"
+                android:text="@string/my_profile"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlvCreateLabel"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:layout_below="@+id/rlvMyProfile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_5dp"
+            android:foreground="?selectableItemBackground"
+            android:paddingHorizontal="@dimen/_40dp"
+            tools:ignore="UnusedAttribute">
+
+            <ImageView
+                android:id="@+id/imgvCreateLabel"
+                android:layout_width="@dimen/_24dp"
+                android:layout_height="@dimen/_24dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_create_label" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_20dp"
+                android:layout_toEndOf="@id/imgvCreateLabel"
+                android:text="@string/create_label"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_14sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlvUpComingReminders"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:layout_below="@+id/rlvCreateLabel"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_5dp"
+            android:foreground="?selectableItemBackground"
+            android:paddingHorizontal="@dimen/_40dp"
+            android:visibility="visible"
+            tools:ignore="UnusedAttribute">
+
+            <ImageView
+                android:id="@+id/imgvUpCommingReminders"
+                android:layout_width="@dimen/_24dp"
+                android:layout_height="@dimen/_24dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_reminder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_20dp"
+                android:layout_toEndOf="@id/imgvUpCommingReminders"
+                android:text="@string/upcoming_reminders"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlvSubscriptions"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:layout_below="@+id/rlvUpComingReminders"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_5dp"
+            android:foreground="?selectableItemBackground"
+            android:paddingHorizontal="@dimen/_40dp"
+            tools:ignore="UnusedAttribute">
+
+            <ImageView
+                android:id="@+id/aboutImgMenu"
+                android:layout_width="@dimen/_24dp"
+                android:layout_height="@dimen/_24dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_subscription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_20dp"
+                android:layout_toEndOf="@id/aboutImgMenu"
+                android:text="@string/subscriptions"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_14sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlvSettings"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:layout_below="@+id/rlvSubscriptions"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_5dp"
+            android:foreground="?selectableItemBackground"
+            android:paddingHorizontal="@dimen/_40dp"
+            tools:ignore="UnusedAttribute">
+
+            <ImageView
+                android:id="@+id/imgvSettings"
+                android:layout_width="@dimen/_24dp"
+                android:layout_height="@dimen/_24dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_settings" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_20dp"
+                android:layout_toEndOf="@id/imgvSettings"
+                android:text="@string/settings"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_14sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlvLogout"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:layout_below="@+id/rlvSettings"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_5dp"
+            android:foreground="?selectableItemBackground"
+            android:paddingHorizontal="@dimen/_40dp"
+            tools:ignore="UnusedAttribute">
+
+            <ImageView
+                android:id="@+id/imgvLogout"
+                android:layout_width="@dimen/_24dp"
+                android:layout_height="@dimen/_24dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_log_out" />
+
+            <TextView
+                android:id="@+id/signOuTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_20dp"
+                android:layout_toEndOf="@id/imgvLogout"
+                android:text="@string/log_out"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_14sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

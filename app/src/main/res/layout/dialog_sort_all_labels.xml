@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="180dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:translationZ="3dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/rlAlphabetical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:paddingEnd="10dp">
+
+            <ImageView
+                android:id="@+id/ivAlphabeticalIcon"
+                android:layout_width="@dimen/_24dp"
+                android:layout_height="@dimen/_24dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/_10dp"
+                android:src="@drawable/ic_baseline_sort_by_alpha_24" />
+
+            <TextView
+                android:id="@+id/tvAlphabetical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/ivAlphabeticalIcon"
+                android:text="@string/alphabetical"
+                android:textSize="@dimen/_14sp" />
+
+            <RadioButton
+                android:id="@+id/rbAlphabetical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_gravity="start"
+                android:buttonTint="@color/blue"
+                android:checked="false"
+                android:layoutDirection="rtl"
+                android:textAlignment="textStart" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlCreateDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlAlphabetical"
+            android:layout_centerHorizontal="true"
+            android:paddingEnd="10dp">
+
+            <ImageView
+                android:id="@+id/ivCreateDateIcon"
+                android:layout_width="@dimen/_24dp"
+                android:layout_height="@dimen/_24dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/_10dp"
+                android:src="@drawable/ic_baseline_calendar_today_24" />
+
+            <TextView
+                android:id="@+id/tvCreateDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/ivCreateDateIcon"
+                android:text="@string/create_date"
+                android:textSize="@dimen/_14sp" />
+
+            <RadioButton
+                android:id="@+id/rbCreateDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="start"
+                android:buttonTint="@color/blue"
+                android:checked="false"
+                android:layoutDirection="rtl"
+                android:textAlignment="textStart" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlUpdateDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlCreateDate"
+            android:layout_centerHorizontal="true"
+            android:paddingEnd="10dp">
+
+            <ImageView
+                android:id="@+id/ivUpdateDateIcon"
+                android:layout_width="@dimen/_24dp"
+                android:layout_height="@dimen/_24dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/_10dp"
+                android:src="@drawable/ic_baseline_edit_calendar_24" />
+
+            <TextView
+                android:id="@+id/tvUpdateDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/ivUpdateDateIcon"
+                android:text="@string/update_date"
+                android:textSize="@dimen/_14sp" />
+
+            <RadioButton
+                android:id="@+id/rbUpdateDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="start"
+                android:buttonTint="@color/blue"
+                android:layoutDirection="rtl"
+                android:textAlignment="textStart" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlReminder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlUpdateDate"
+            android:layout_centerHorizontal="true"
+            android:paddingEnd="10dp">
+
+            <ImageView
+                android:id="@+id/ivReminderIcon"
+                android:layout_width="@dimen/_24dp"
+                android:layout_height="@dimen/_24dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/_10dp"
+                android:src="@drawable/ic_baseline_alarm_24" />
+
+            <TextView
+                android:id="@+id/tvReminder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/ivReminderIcon"
+                android:text="@string/reminder"
+                android:textSize="@dimen/_14sp" />
+
+            <RadioButton
+                android:id="@+id/rbReminder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="start"
+                android:buttonTint="@color/blue"
+                android:layoutDirection="rtl"
+                android:textAlignment="textStart" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EditText xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/etDocInfoType"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_40dp"
+    android:layout_marginHorizontal="@dimen/_10dp"
+    android:layout_marginBottom="@dimen/_10dp"
+    android:background="@drawable/light_ash_corner_radius_5"
+    android:drawableEnd="@drawable/ic_baseline_calendar_today_24"
+    android:hint="@string/full_name"
+    android:inputType="text"
+    android:lines="1"
+    android:maxLines="1"
+    android:textColor="@color/other_info_text_color"
+    android:textColorHint="@color/hint_text_color"
+    android:textSize="@dimen/_16sp" />

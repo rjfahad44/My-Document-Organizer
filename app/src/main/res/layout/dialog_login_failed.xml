@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/_20dp"
+    app:cardCornerRadius="@dimen/_20dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivFailedIcon"
+            android:layout_width="@dimen/_70dp"
+            android:layout_height="@dimen/_70dp"
+            android:layout_marginTop="@dimen/_15dp"
+            android:src="@drawable/ic_failed"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvFailedTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="@dimen/_5dp"
+            android:text="@string/failed"
+            android:textColor="@color/failed_text_color"
+            android:textSize="@dimen/_20sp"
+            app:layout_constraintEnd_toEndOf="@id/ivFailedIcon"
+            app:layout_constraintStart_toStartOf="@id/ivFailedIcon"
+            app:layout_constraintTop_toBottomOf="@+id/ivFailedIcon" />
+
+        <TextView
+            android:id="@+id/tvSubTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20dp"
+            android:layout_marginVertical="@dimen/_10dp"
+            android:text="@string/sorry_your_account_creation_is_not_successful"
+            android:textAlignment="center"
+            android:textColor="@color/hint_text_color"
+            android:textSize="@dimen/_18sp"
+            app:layout_constraintEnd_toEndOf="@id/tvTryAgain"
+            app:layout_constraintStart_toStartOf="@id/tvTryAgain"
+            app:layout_constraintTop_toBottomOf="@+id/tvFailedTitle" />
+
+
+        <TextView
+            android:id="@+id/tvTryAgain"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:layout_marginHorizontal="@dimen/_20dp"
+            android:layout_marginVertical="@dimen/_20dp"
+            android:background="@drawable/blue_corner_radius_5"
+            android:gravity="center"
+            android:text="@string/try_again"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSubTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

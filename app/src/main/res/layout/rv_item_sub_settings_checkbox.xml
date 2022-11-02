@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlvSettingsItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlvMyProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?selectableItemBackground"
+        android:padding="@dimen/_15dp">
+
+        <TextView
+            android:id="@+id/tvSettingsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20dp"
+            android:text="@string/settings"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvSettingsShortDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvSettingsTitle"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:text="@string/settings"
+            android:textColor="@color/country_text_color" />
+
+    </RelativeLayout>
+
+    <CheckBox
+        android:id="@+id/cbSubSettingsEnableStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginTop="@dimen/_5dp"
+        android:layout_marginEnd="@dimen/_10dp"
+        android:layout_marginRight="@dimen/_10dp"
+        android:textColor="@color/country_text_color" />
+
+</RelativeLayout>

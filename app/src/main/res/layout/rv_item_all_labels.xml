@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_10dp"
+    android:layout_marginBottom="@dimen/_10dp"
+    app:cardCornerRadius="@dimen/_10dp"
+    app:cardElevation="@dimen/_1dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_10dp">
+
+        <RelativeLayout
+            android:id="@+id/rlLabelIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:id="@+id/ivIconLabel"
+                android:layout_width="@dimen/_24dp"
+                android:layout_height="@dimen/_24dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="@dimen/_10dp"
+                android:src="@drawable/ic_level"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/_15dp"
+            android:layout_toStartOf="@id/ivThreeDotMenuItem"
+            android:layout_toEndOf="@id/rlLabelIcon"
+            android:ellipsize="end"
+            android:textColor="@color/document_title_text_color"
+            android:textSize="@dimen/_16sp"
+            android:text="Document Name Goes Here...." />
+
+        <ImageView
+            android:id="@+id/ivThreeDotMenuItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:src="@drawable/ic_three_dots"
+            tools:ignore="ContentDescription" />
+
+
+        <RelativeLayout
+            android:id="@+id/rlDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlLabelIcon"
+            android:layout_marginStart="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_toEndOf="@+id/rlLabelIcon">
+
+            <ImageView
+                android:id="@+id/ivIconCalendar"
+                android:layout_width="@dimen/_16dp"
+                android:layout_height="@dimen/_16dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_feather_calendar"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5dp"
+                android:layout_toEndOf="@id/ivIconCalendar"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12sp"
+                android:text="September 6, 2022" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlLabelIcon"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_toEndOf="@+id/rlDate">
+
+            <ImageView
+                android:id="@+id/ivIconDocumentCounter"
+                android:layout_width="@dimen/_16dp"
+                android:layout_height="@dimen/_16dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_document_counter"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tvDocumentCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5dp"
+                android:layout_toEndOf="@+id/ivIconDocumentCounter"
+                android:text="3"
+                android:textColor="@color/hint_text_color"
+                android:textSize="@dimen/_12sp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlRemainder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlLabelIcon"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_toEndOf="@+id/rlCounter">
+
+            <ImageView
+                android:id="@+id/ivRemainder"
+                android:layout_width="@dimen/_16dp"
+                android:layout_height="@dimen/_16dp"
+                android:src="@drawable/ic_baseline_alarm_24"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tvRemainderCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5dp"
+                android:layout_toEndOf="@+id/ivRemainder"
+                android:text="0"
+                android:textColor="@color/hint_text_color"
+                android:textSize="@dimen/_12sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

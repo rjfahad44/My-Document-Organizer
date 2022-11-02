@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlvSettingsItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlvMyProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:foreground="?selectableItemBackground"
+        android:padding="@dimen/_15dp">
+
+        <ImageView
+            android:id="@+id/ivSettingsIcon"
+            android:layout_width="@dimen/_20dp"
+            android:layout_height="@dimen/_20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="@dimen/_15dp"
+            android:src="@drawable/ic_my_profile" />
+
+        <TextView
+            android:id="@+id/tvSettingsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/ivSettingsIcon"
+            android:text="@string/my_profile"
+            android:textSize="@dimen/_14sp"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

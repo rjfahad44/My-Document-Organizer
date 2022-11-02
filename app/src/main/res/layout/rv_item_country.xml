@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvCountry"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="@dimen/_10dp"
+        android:gravity="center_vertical"
+        android:text="Bangladesh"
+        android:textColor="@color/country_text_color"
+        android:textSize="@dimen/_16sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tvCountry"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="@dimen/_5dp"
+        android:background="@color/divider_bg_color" />
+
+
+</RelativeLayout>

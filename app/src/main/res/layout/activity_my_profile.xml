@@ -97,7 +97,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@id/ivNameIcon"
-                android:text="Nur E Alam Khan"
+                android:text="Muhammad Fahad Alam"
                 android:textColor="@color/text_color"
                 android:textSize="@dimen/_14sp" />
 
@@ -176,7 +176,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@id/ivEmailIcon"
-                android:text="porosh.kanon@gmail.com"
+                android:text="rjfahad44@gmail.com"
                 android:textColor="@color/text_color"
                 android:textSize="@dimen/_14sp" />
 
